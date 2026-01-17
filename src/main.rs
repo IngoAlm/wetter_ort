@@ -84,14 +84,22 @@ fn main() {
     println!("Bewölkung   : {}%", wolken);
     println!("");
 
-    if temp_celsius > 20.0 {
-        println!("Ächz, eine mörderische Hitze!");
-    } else if temp_celsius >= 15.0 {
-        println!("Puh, ganz schön Warm!");
-    } else if temp_celsius >= 5.0 {
-        println!("Naja, langsam wird es besser")
-    } else {
-        println!("Wow, echt tolles Wetter");
+    match temp_celsius {
+        20.0 .. => {
+            println!("Ächz, eine mörderische Hitze!");
+        }
+        15.0 .. 19.9 => {
+            println!("Puh, ganz schön Warm!");    
+        }
+        5.0 .. 14.9 => {
+            println!("Naja, langsam wird es besser")    
+        }
+        .. 4.9 => {
+            println!("Wow, echt tolles Wetter");    
+        }
+        _ => {}
     }
+
     println!("\n");
+
 }
