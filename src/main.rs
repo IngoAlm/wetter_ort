@@ -85,21 +85,20 @@ fn main() {
     println!("");
 
     match temp_celsius {
-        20.0 .. => {
+        20.0.. => {
             println!("Ächz, eine mörderische Hitze!");
         }
-        15.0 .. 19.9 => {
-            println!("Puh, ganz schön Warm!");    
+        15.0..19.9 => {
+            println!("Puh, ganz schön Warm!");
         }
-        5.0 .. 14.9 => {
-            println!("Naja, langsam wird es besser")    
+        5.0..14.9 => {
+            println!("Naja, langsam wird es besser")
         }
-        .. 4.9 => {
-            println!("Wow, echt tolles Wetter");    
+        ..4.9 => {
+            println!("Wow, echt tolles Wetter");
         }
         _ => {}
     }
 
     println!("\n");
-
 }
